@@ -2,9 +2,16 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int [] weight = new int []{1,2,3};
+        int [] weight = new int [3];
+        weight [0] = 1;
+        weight [1] = 2;
+        weight [2] = 3;
 
-        double [] weightTwo = new double []{1.57, 7.654, 9.986};
+        double [] weightTwo = new double [3];
+        weightTwo[0] = 1.57;
+        weightTwo[1] = 7.654;
+        weightTwo[2] = 9.986;
+
 
         float [] weightThree = new float[5];
         weightThree[0] = 3.14159f;
@@ -39,25 +46,25 @@ public class Main {
         System.out.println();
 
 
-        for (int l = weight.length - 1; l < weight.length; l--) {
+        for (int l = weight.length - 1; l >= 0; l--) {
             if (l == 0) {
-                System.out.print(weight[0]);
+                System.out.print(weight[l]);
                 break;
             }
             System.out.print(weight[l] + ", ");
         }
         System.out.println();
-        for (int m = weightTwo.length - 1; m < weightTwo.length; m--) {
+        for (int m = weightTwo.length - 1; m >= 0; m--) {
             if (m == 0) {
-                System.out.print(weightTwo[0]);
+                System.out.print(weightTwo[m]);
                 break;
             }
             System.out.print(weightTwo[m] + ", ");
         }
         System.out.println();
-        for (int n = weightThree.length - 1; n < weightThree.length; n--) {
+        for (int n = weightThree.length - 1; n >= 0; n--) {
             if (n == 0) {
-                System.out.print(weightThree[0]);
+                System.out.print(weightThree[n]);
                 break;
             }
             System.out.print(weightThree[n] + ", ");
@@ -70,7 +77,7 @@ public class Main {
             if (weight[q] % 2 != 0) {
                 weight[q] = weight[q] + 1;
             }
-            System.out.print(Arrays.toString(weight)); // у меня выходят лишние неверные печати из-за предыдущих задач, судя по всему
         }
+        System.out.print(Arrays.toString(weight));
     }
 }
